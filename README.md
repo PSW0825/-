@@ -1,4 +1,4 @@
-![과제1](https://github.com/PSW0825/-/assets/127822725/b60f5a46-dad5-4b4a-b032-d1e15088010c)
+![과제1](https://github.com/PSW0825/-/assets/127822725/6ac3132b-7a0a-42d1-bf93-c9e2bbb73024)
 ![과제2](https://github.com/PSW0825/-/assets/127822725/58861b81-8a31-4aa8-a6cc-567293430d25)
 ![과제3](https://github.com/PSW0825/-/assets/127822725/f50d49b3-c6bf-460c-8a87-8eea4102d715)
 
@@ -9,15 +9,14 @@
 <코드설명> 
 
 이 코드는 on/off버튼을 누를시 배경 색깔이 바뀌는 앱을 실행하기위한 코드입니다. 아래는 코드 상세설명입니다.
-
-import processing.net.*;: Processing의 네트워크 라이브러리를 가져오는 부분입니다. 이 라이브러리를 사용하여 네트워크 통신을 구현할 수 있습니다.
-
-Server s;와 Client c;: 서버와 클라이언트 객체를 선언합니다. Server 객체는 서버 역할을 하고, Client 객체는 클라이언트 역할을 합니다.
-
-void setup(): Processing 프로그램의 초기 설정을 하는 함수입니다. 이 함수에서는 서버를 포트 12345로 생성합니다.
-
-void draw(): 이 함수는 계속해서 실행되는 메인 루프입니다. 이 부분에서 다음을 수행합니다:
-
+import processing.net.*;: Processing의 네트워크 라이브러리를 가져오는 부분입니다. 
+이 라이브러리를 사용하여 네트워크 통신을 구현할 수 있습니다.
+Server s;와 Client c;: 서버와 클라이언트 객체를 선언합니다. 
+Server 객체는 서버 역할을 하고, Client 객체는 클라이언트 역할을 합니다.
+void setup(): Processing 프로그램의 초기 설정을 하는 함수입니다. 
+이 함수에서는 서버를 포트 12345로 생성합니다.
+void draw(): 이 함수는 계속해서 실행되는 메인 루프입니다.
+이 부분에서 다음을 수행합니다:
 c = s.available();: 서버에서 클라이언트의 연결 요청을 대기하고, 연결이 성립되면 해당 클라이언트 객체를 c에 할당합니다.
 if (c != null) { ... }: 클라이언트가 연결되었을 때 아래의 코드 블록을 실행합니다.
 String m = c.readString();: 클라이언트로부터 받은 메시지를 읽어와 m 변수에 저장합니다.
